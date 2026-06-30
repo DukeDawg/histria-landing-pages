@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Forgotten Classics — Histria Classics</title>
+<meta name="description" content="Forgotten Classics recovers the books that shaped modern culture — restored in premium hardcover editions. Become a founding reader." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0e0c0a;
+    --ink-2:#161210;
+    --oxblood:#5a1a23;
+    --oxblood-deep:#3d1117;
+    --forest:#1f3a2e;
+    --gold:#c9a14a;
+    --gold-soft:#e0c479;
+    --cream:#efe6d2;
+    --cream-dim:#c9bda3;
+    --line:rgba(201,161,74,.28);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--cream);
+    font-family:'EB Garamond',Georgia,serif;
+    font-size:19px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.1}
+  .deco{font-family:'Cinzel',serif;letter-spacing:.18em;text-transform:uppercase}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  .gold{color:var(--gold-soft)}
+  .rule{width:90px;height:1px;background:var(--gold);opacity:.7;margin:22px auto;position:relative}
+  .rule::after{content:"❖";position:absolute;top:-12px;left:50%;transform:translateX(-50%);color:var(--gold);font-size:13px;background:var(--ink);padding:0 8px}
+
+  /* top bar */
+  .topbar{display:flex;justify-content:center;align-items:center;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .topbar .mark{font-family:'Cinzel',serif;letter-spacing:.32em;font-size:12px;color:var(--cream-dim)}
+  .topbar .series{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--gold-soft)}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:0;align-items:stretch;min-height:80vh}
+  .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:70px 48px 70px 0}
+  .hero-copy .eyebrow{font-family:'Cinzel',serif;letter-spacing:.28em;font-size:11px;color:var(--gold);margin-bottom:26px}
+  .hero h1{font-size:clamp(3rem,6vw,5.2rem);color:var(--cream)}
+  .hero h1 em{font-style:italic;color:var(--gold-soft)}
+  .hero .sub{font-size:1.32rem;color:var(--cream-dim);margin:28px 0 8px;max-width:34ch}
+
+  /* hero — real cover spotlight */
+  .hero-img{position:relative;background:radial-gradient(ellipse at center,#1a130d 0%,var(--ink) 72%);display:flex;align-items:center;justify-content:center;padding:60px 30px;min-height:520px}
+  .cover-spot{position:relative;display:inline-block}
+  .cover-spot .cover-art{max-height:62vh;max-width:100%;width:auto;height:auto;display:block;border:1px solid rgba(201,161,74,.22);border-radius:2px;box-shadow:0 32px 80px rgba(0,0,0,.65),0 10px 26px rgba(0,0,0,.45)}
+  .cover-badge{position:absolute;top:14px;left:-12px;font-family:'Cinzel',serif;letter-spacing:.16em;font-size:10px;text-transform:uppercase;color:#241a08;background:linear-gradient(180deg,var(--gold-soft),var(--gold));padding:6px 14px;border-radius:2px;box-shadow:0 6px 18px rgba(201,161,74,.3)}
+
+  /* hero — inline email grab (fast path above the fold) */
+  .hero-grab{display:flex;gap:8px;margin-top:30px;max-width:440px}
+  .hero-grab input{flex:1;background:#0c0a08;border:1px solid var(--line);color:var(--cream);padding:14px 16px;font-family:'EB Garamond',serif;font-size:1.02rem;border-radius:3px}
+  .hero-grab input:focus{outline:none;border-color:var(--gold)}
+  .hero-grab button{padding:14px 22px;font-size:12px}
+  .hero-grab-note{font-size:.88rem;color:var(--cream-dim);font-style:italic;margin-top:10px}
+  .hero-or{font-family:'Cinzel',serif;letter-spacing:.22em;font-size:10px;color:rgba(201,189,163,.45);margin:18px 0 4px;text-transform:uppercase}
+  .grabbed{color:var(--gold-soft);font-family:'Cormorant Garamond',serif;font-size:1.3rem;padding:14px 0}
+
+  .btn{display:inline-block;font-family:'Cinzel',serif;letter-spacing:.16em;text-transform:uppercase;font-size:13px;
+    background:linear-gradient(180deg,var(--gold-soft),var(--gold));color:#241a08;padding:16px 30px;border:none;border-radius:2px;
+    text-decoration:none;font-weight:600;transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 6px 22px rgba(201,161,74,.18);cursor:pointer}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(201,161,74,.3)}
+  .btn.ghost{background:transparent;color:var(--gold-soft);border:1px solid var(--gold);box-shadow:none}
+  .btn.ghost:hover{background:rgba(201,161,74,.08)}
+  .cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:34px}
+  .cta-row .note{font-size:.95rem;color:var(--cream-dim);font-style:italic}
+
+  section{padding:84px 0}
+  .mission{background:linear-gradient(180deg,#120f0d,#0e0c0a);text-align:center;border-bottom:1px solid var(--line)}
+  .mission .big{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.7rem,3.4vw,2.7rem);color:var(--cream);max-width:24ch;margin:0 auto;line-height:1.28}
+  .mission p{max-width:60ch;margin:26px auto 0;color:var(--cream-dim)}
+
+  .section-head{text-align:center;margin-bottom:54px}
+  .section-head .kicker{font-family:'Cinzel',serif;letter-spacing:.26em;font-size:11px;color:var(--gold)}
+  .section-head h2{font-size:clamp(2rem,4vw,3rem);margin-top:14px;color:var(--cream)}
+
+  /* authority cards */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:linear-gradient(180deg,#171310,#100d0b);border:1px solid var(--line);border-radius:4px;padding:34px 28px;position:relative}
+  .card .num{font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--gold-soft);line-height:1;margin-bottom:14px}
+  .card h3{font-size:1.5rem;color:var(--cream);margin-bottom:10px}
+  .card p{font-size:1rem;color:var(--cream-dim)}
+
+  /* market stat strip */
+  .stats{background:var(--oxblood-deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stats .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
+  .stat .n{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--gold-soft);line-height:1}
+  .stat .l{font-size:.95rem;color:var(--cream-dim);margin-top:8px}
+  .stats .src{text-align:center;margin-top:40px;font-size:.82rem;color:rgba(201,189,163,.55);font-style:italic}
+
+  /* editions split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:center}
+  .split.rev .txt{order:2}
+  .split .img img{width:100%;height:100%;object-fit:cover;min-height:520px}
+  .split .txt{padding:0 56px}
+  .split .txt h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:8px}
+  .feat{list-style:none;margin:26px 0}
+  .feat li{padding:11px 0 11px 30px;position:relative;border-bottom:1px solid rgba(201,161,74,.14);color:var(--cream-dim)}
+  .feat li::before{content:"❖";position:absolute;left:0;color:var(--gold);font-size:12px;top:14px}
+  .feat li b{color:var(--cream);font-weight:500}
+  .price{margin-top:26px;font-size:1.05rem;color:var(--cream)}
+  .price .tag{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--gold-soft)}
+
+  /* bundle pair — Founding Pair (IT + Clara Bow) */
+  .pair{list-style:none;margin:28px 0 8px;border-top:1px solid var(--line)}
+  .pair li{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .pair-title{font-family:'Cormorant Garamond',serif;font-size:1.45rem;color:var(--cream);line-height:1.2}
+  .pair-title em{font-style:italic}
+  .pair-by{display:block;font-size:.95rem;color:var(--cream-dim);font-style:italic;margin-top:4px;grid-column:1}
+  .pair-price{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--gold-soft);grid-row:1;grid-column:2;white-space:nowrap}
+  .pair-spec{margin-top:18px;color:var(--cream-dim);font-style:italic;font-size:.98rem;line-height:1.55}
+  .pair-spec b{color:var(--cream);font-style:normal;font-weight:500}
+  .bundle-img{background:radial-gradient(ellipse at center,#1a130d 0%,var(--ink) 75%);display:flex;align-items:center;justify-content:center;gap:24px;padding:60px 36px;min-height:560px}
+  .bundle-img img{width:auto;height:auto;max-height:50vh;min-height:340px;max-width:42%;border:1px solid rgba(201,161,74,.22);border-radius:2px;box-shadow:0 26px 60px rgba(0,0,0,.6),0 8px 20px rgba(0,0,0,.4)}
+  .bundle-img img:first-child{transform:rotate(-3deg) translateY(-4px)}
+  .bundle-img img:last-child{transform:rotate(3deg) translateY(8px)}
+
+  /* rescue-list with cover thumbnails */
+  .vol.with-cover{display:flex;gap:22px;align-items:flex-start}
+  .vol.with-cover .vol-body{flex:1;min-width:0}
+  .vol-cover{width:92px;flex-shrink:0;border:1px solid var(--line);box-shadow:0 12px 28px rgba(0,0,0,.45);border-radius:2px;align-self:center}
+
+  /* founding reader / form */
+  .founding{background:linear-gradient(180deg,#0e0c0a,#15100c);border-top:1px solid var(--line)}
+  .founding .inner{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+  .founding .img img{border-radius:4px;border:1px solid var(--line)}
+  .kit{list-style:none;margin:24px 0}
+  .kit li{padding:9px 0 9px 28px;position:relative;color:var(--cream-dim)}
+  .kit li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+  form .field{margin-bottom:16px}
+  form label{display:block;font-size:.85rem;letter-spacing:.06em;color:var(--cream-dim);margin-bottom:7px;text-transform:uppercase}
+  form input,form select{width:100%;background:#0c0a08;border:1px solid var(--line);color:var(--cream);padding:14px 16px;font-family:'EB Garamond',serif;font-size:1.05rem;border-radius:3px}
+  form input:focus,form select:focus{outline:none;border-color:var(--gold)}
+  .scarcity{margin-top:18px;font-size:.95rem;color:var(--gold-soft);font-style:italic}
+  .formcard{background:linear-gradient(180deg,#171310,#100d0b);border:1px solid var(--line);border-radius:6px;padding:38px}
+
+  /* rescue list */
+  .rescue .timeline{max-width:760px;margin:0 auto;position:relative}
+  .rescue .timeline::before{content:"";position:absolute;left:18px;top:8px;bottom:8px;width:1px;background:var(--line)}
+  .vol{position:relative;padding:0 0 38px 56px}
+  .vol::before{content:"";position:absolute;left:11px;top:6px;width:15px;height:15px;border-radius:50%;background:var(--ink);border:2px solid var(--gold)}
+  .vol.live::before{background:var(--gold)}
+  .vol .when{font-family:'Cinzel',serif;letter-spacing:.18em;font-size:10px;color:var(--gold)}
+  .vol h3{font-size:1.7rem;color:var(--cream);margin:4px 0}
+  .vol h3 .by{font-style:italic;color:var(--cream-dim);font-size:1.2rem}
+  .vol p{color:var(--cream-dim);font-size:1.02rem}
+  .vol .badge{display:inline-block;font-family:'Cinzel',serif;font-size:9px;letter-spacing:.14em;color:#241a08;background:var(--gold-soft);padding:3px 9px;border-radius:2px;margin-left:8px;vertical-align:middle}
+
+  /* final cta */
+  .final{text-align:center;background:radial-gradient(ellipse at center,#1a130d 0%,#0e0c0a 70%);border-top:1px solid var(--line)}
+  .final h2{font-size:clamp(2.2rem,5vw,3.6rem);color:var(--cream);max-width:18ch;margin:0 auto 10px}
+  .final p{color:var(--cream-dim);max-width:48ch;margin:0 auto 32px}
+
+  footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;color:var(--cream-dim);font-size:.9rem}
+  footer .series{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;color:var(--gold-soft)}
+  footer .fine{margin-top:14px;font-size:.8rem;color:rgba(201,189,163,.5)}
+
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr}
+    .hero-copy{padding:54px 0 40px;order:2}
+    .hero-img{min-height:auto;padding:40px 20px 30px;order:1}
+    .cover-spot .cover-art{max-height:46vh}
+    .hero-grab{max-width:none}
+    .cards{grid-template-columns:1fr}
+    .stats .grid{grid-template-columns:1fr 1fr;gap:30px 20px}
+    .split{grid-template-columns:1fr}
+    .split.rev .txt{order:0}
+    .split .txt{padding:44px 0 0}
+    .split .img img{min-height:340px}
+    .bundle-img{min-height:auto;padding:44px 20px;gap:14px}
+    .bundle-img img{max-height:46vh;min-height:240px}
+    .founding .inner{grid-template-columns:1fr;gap:34px}
+    .founding .img{order:2}
+    .vol.with-cover{gap:14px}
+    .vol-cover{width:72px}
+  }
+</style>
+</head>
+<body>
+
+  <div class="wrap topbar">
+    <span class="mark">HISTRIA CLASSICS</span>
+    <span style="color:var(--line)">·</span>
+    <span class="series">Forgotten Classics</span>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">A Curated Series · Restored in Premium Hardcover</div>
+          <h1>Some stories deserve a <em>second life.</em></h1>
+          <p class="sub">The books that shaped how a generation thought, talked, and lived — then slipped out of print while their influence never did. We bring them back.</p>
+          <form class="hero-grab" onsubmit="event.preventDefault();this.outerHTML='<p class=\'grabbed\'>The It Girl Kit is on its way. Welcome.</p>';">
+            <input type="email" required placeholder="you@example.com" aria-label="Email for the It Girl Kit" />
+            <button class="btn" type="submit">Get the Kit</button>
+          </form>
+          <p class="hero-grab-note">Free — the Original It Girl Kit, emailed instantly.</p>
+          <div class="hero-or">— or —</div>
+          <div class="cta-row">
+            <a href="#join" class="btn ghost">Become a Founding Reader</a>
+            <a href="#editions" class="btn ghost">See the editions</a>
+          </div>
+        </div>
+        <div class="hero-img">
+          <div class="cover-spot">
+            <span class="cover-badge">Vol. 1 · Out Now</span>
+            <img src="assets/cover-it-glyn.jpg" alt="Forgotten Classics No. 1 — IT by Elinor Glyn, premium hardcover edition" class="cover-art" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MISSION -->
+  <section class="mission">
+    <div class="wrap">
+      <div class="rule"></div>
+      <p class="big">This is not a reprint list. It is a curated publishing program recovering the books that shaped modern culture.</p>
+      <p>Bestsellers, cultural phenomena, and literary milestones that once defined their era and then fell from the modern canon. Not obscure curiosities — books that were widely read, debated, and adapted in their time, now restored in premium hardcover editions with newly commissioned scholarly introductions.</p>
+    </div>
+  </section>
+
+  <!-- AUTHORITY PROOF -->
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Why These Books</div>
+        <h2>The canon you quote without knowing it</h2>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="num">“It”</div>
+          <h3>The word that named celebrity</h3>
+          <p>Elinor Glyn coined “It” in her 1927 novel — and a century of celebrity culture followed. Paramount paid her $50,000 for the concept alone, and the film made Clara Bow the biggest star of the Jazz Age.</p>
+        </div>
+        <div class="card">
+          <div class="num">✦</div>
+          <h3>Nobel & Pulitzer pedigree</h3>
+          <p>Sinclair Lewis — first American to win the Nobel Prize in Literature. Booth Tarkington — two-time Pulitzer winner. These authors defined American letters, then went quietly out of print.</p>
+        </div>
+        <div class="card">
+          <div class="num">†</div>
+          <h3>The book behind <em>Dracula</em></h3>
+          <p>Bram Stoker read Emily Gerard's account of Transylvania — and then wrote <em>Dracula</em>. Her novel, <em>The Waters of Hercules</em>, is on the rescue list.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDITIONS — THE FOUNDING PAIR -->
+  <section id="editions" style="padding:0">
+    <div class="split rev">
+      <div class="txt wrap" style="max-width:560px;margin-left:auto;padding:84px 56px">
+        <div class="kicker deco" style="font-size:11px;color:var(--gold)">The Founding Pair</div>
+        <h2>The original It Girl — <em>both sides of the legend</em></h2>
+        <p style="color:var(--cream-dim)">The 1927 novel that <em>named</em> celebrity culture, and the memoir Clara Bow wrote in her own voice. The complete origin story — together for the first time in premium hardcover.</p>
+        <ul class="pair">
+          <li>
+            <span class="pair-title"><em>IT</em><span class="pair-by">by Elinor Glyn · Forgotten Classics No. 1</span></span>
+            <span class="pair-price">$29.99</span>
+          </li>
+          <li>
+            <span class="pair-title">Clara Bow: My Story<span class="pair-by">the memoir of the original It Girl · Histria A&amp;E</span></span>
+            <span class="pair-price">$24.99</span>
+          </li>
+        </ul>
+        <p class="pair-spec"><b>Every volume:</b> faux-cloth casebound · gold foil-stamped spine &amp; cover · patterned endpapers · satin ribbon · cream paper · a new introduction. Made to be held, displayed, and handed down — not read once and forgotten.</p>
+      </div>
+      <div class="img bundle-img">
+        <img src="assets/cover-it-glyn.jpg" alt="IT by Elinor Glyn — Forgotten Classics No. 1 premium hardcover" />
+        <img src="assets/cover-clara-bow.jpg" alt="Clara Bow: My Story — companion memoir from Histria A&E" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDING READER + FORM -->
+  <section class="founding" id="join">
+    <div class="wrap">
+      <div class="inner">
+        <div class="img"><img src="assets/founding-reader.jpg" alt="A reader enjoying a Forgotten Classics edition in a curated reading nook" /></div>
+        <div>
+          <div class="kicker deco" style="font-size:11px;color:var(--gold)">Join the founding readers</div>
+          <h2 style="font-size:clamp(2rem,4vw,2.8rem);margin:12px 0">Be among the first.</h2>
+          <p style="color:var(--cream-dim)">You're not late — you're early. Found the list, and we'll send you <b style="color:var(--cream)">The Original It Girl Kit</b>, free:</p>
+          <ul class="kit">
+            <li>The origin essay — “Clara Bow and the Birth of the It Girl”</li>
+            <li>First-chapter excerpts from <em>IT</em></li>
+            <li>A “watch the movie, read the source” guide to the 1927 film</li>
+            <li>The real 1920s aesthetic behind the legend</li>
+          </ul>
+          <div class="formcard">
+            <form onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:var(--gold-soft);font-family:Cormorant Garamond,serif;font-size:1.4rem;text-align:center;padding:20px 0\'>Welcome, founding reader. Your kit is on its way.</p>';">
+              <div class="field">
+                <label for="email">Email address</label>
+                <input id="email" type="email" required placeholder="you@example.com" />
+              </div>
+              <div class="field">
+                <label for="worlds">Which lost worlds do you want back?</label>
+                <select id="worlds">
+                  <option>Jazz Age &amp; Old Hollywood</option>
+                  <option>Forgotten Women Writers</option>
+                  <option>Gothic &amp; Fin-de-Siècle</option>
+                  <option>The Great American Novel</option>
+                  <option>Surprise me</option>
+                </select>
+              </div>
+              <button class="btn" type="submit" style="width:100%">Join &amp; Get the Kit</button>
+            </form>
+            <p class="scarcity">Founding-reader editions are numbered. Get in before Vol. 1 ships.</p>
+            <p style="font-size:.82rem;color:rgba(201,189,163,.5);margin-top:8px">No spam, ever. Unsubscribe any time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESCUE LIST -->
+  <section class="rescue">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">The Rescue List</div>
+        <h2>What we're bringing back</h2>
+        <p style="color:var(--cream-dim);max-width:50ch;margin:14px auto 0">Two to three new volumes a year — an ongoing series to collect, not a one-off.</p>
+      </div>
+      <div class="timeline">
+        <div class="vol live with-cover">
+          <img class="vol-cover" src="assets/cover-it-glyn.jpg" alt="IT by Elinor Glyn — Forgotten Classics No. 1" />
+          <div class="vol-body">
+            <div class="when">Spring 2026 · Out Now</div>
+            <h3>IT <span class="by">by Elinor Glyn</span><span class="badge">Lead Title</span></h3>
+            <p>The novel that invented the “It Girl” — out of print for decades, the seismic Jazz Age bestseller that made Clara Bow a star.</p>
+          </div>
+        </div>
+        <div class="vol with-cover">
+          <img class="vol-cover" src="assets/cover-main-street.jpg" alt="Main Street by Sinclair Lewis" />
+          <div class="vol-body">
+            <div class="when">Fall 2026</div>
+            <h3>Main Street <span class="by">by Sinclair Lewis</span></h3>
+            <p>From the first American Nobel laureate in Literature. Name recognition, school curricula — a proven anchor title.</p>
+          </div>
+        </div>
+        <div class="vol">
+          <div class="when">Spring 2027</div>
+          <h3>Flaming Youth <span class="by">by Samuel Hopkins Adams</span></h3>
+          <p>The Jazz Age scandal novel so incendiary its author published it behind the pen name “Warner Fabian.” Adapted into the Colleen Moore film.</p>
+        </div>
+        <div class="vol">
+          <div class="when">Forthcoming</div>
+          <h3>Beggars of Life <span class="by">by Jim Tully</span></h3>
+          <p>The raw hobo memoir from the man called “the toughest writer in America.”</p>
+        </div>
+        <div class="vol">
+          <div class="when">Forthcoming</div>
+          <h3>The Waters of Hercules <span class="by">by E.D. Gerard</span></h3>
+          <p>By Emily Gerard, whose Transylvania writings Bram Stoker read before writing <em>Dracula</em>.</p>
+        </div>
+        <div class="vol">
+          <div class="when">Forthcoming</div>
+          <h3>Claire Ambler <span class="by">by Booth Tarkington</span></h3>
+          <p>From the two-time Pulitzer Prize winner — a portrait of the modern young woman of the 1920s.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <div class="wrap">
+      <div class="rule"></div>
+      <h2>The books the world forgot. Restored.</h2>
+      <p>Found the series. Get the kit. Be first to every rediscovery.</p>
+      <a href="#join" class="btn">Become a Founding Reader</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="series">Forgotten Classics</div>
+      <div style="font-family:'Cinzel',serif;letter-spacing:.3em;font-size:11px;color:var(--cream-dim);margin-top:6px">HISTRIA CLASSICS</div>
+      <p class="fine">Distributed by Simon &amp; Schuster (US/CA) and IPS (UK) · Follow @HistriaBooks</p>
+    </div>
+  </footer>
+
+</body>
+</html>
