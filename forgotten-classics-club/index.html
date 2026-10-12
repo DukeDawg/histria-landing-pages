@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Forgotten Classics Club | Histria Books</title>
+<meta name="description" content="Some stories deserve a second life. Join the Forgotten Classics Club free to hear first when Histria Classics brings back a book that shaped its era. Your welcome gift: The Original It Girl Kit.">
+<link rel="icon" href="data:,">
+
+<meta property="og:title" content="The Forgotten Classics Club">
+<meta property="og:description" content="Some stories deserve a second life. Join free and get The Original It Girl Kit as your welcome gift.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://histria-pages.pages.dev/forgotten-classics/">
+<meta property="og:image" content="https://histria-pages.pages.dev/forgotten-classics/assets/cover-it.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Histria pixel. Lead fires only on a verified first join to the target group.
+     Review-copy guard: the pixel and the signup run only on the live host (histria-pages.pages.dev).
+     Any other host (a GitHub Pages client preview, a local server) shows the draft bar, sends no
+     pixel events and saves nothing. -->
+<script>
+  var LIVE_HOST = /(^|\.)histria-pages\.pages\.dev$/.test(location.hostname);
+  if (LIVE_HOST) !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  var HISTRIA_PIXEL_ID = '2063760464239197'; // Histria Books pixel — same as /it-girl-kit/
+  if (LIVE_HOST && HISTRIA_PIXEL_ID) { fbq('init', HISTRIA_PIXEL_ID); fbq('track', 'PageView'); }
+</script>
+
+<style>
+  :root{
+    --ink:#0c0c0f; --ink2:#16161b; --cream:#f4ecd9; --cream-dim:#cfc6b2;
+    --gold:#d4af52; --gold-bright:#ecce82; --oxblood:#7a1f2b; --line:rgba(212,175,82,.28);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink); color:var(--cream);
+    font-family:'Jost',system-ui,sans-serif; font-weight:300;
+    line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  [hidden]{display:none!important}
+  .preview-banner{background:#7a1f2b;color:#fff;text-align:center;font-size:14px;padding:8px 12px;font-weight:500;line-height:1.4}
+
+  /* ---- deco backdrop ---- */
+  .deco-rays{
+    position:absolute;inset:0;overflow:hidden;z-index:0;opacity:.5;pointer-events:none;
+    background:
+      conic-gradient(from 180deg at 50% 120%,
+        transparent 0deg, rgba(212,175,82,.10) 6deg, transparent 12deg,
+        rgba(212,175,82,.10) 18deg, transparent 24deg, rgba(212,175,82,.10) 30deg,
+        transparent 36deg, rgba(212,175,82,.10) 42deg, transparent 48deg,
+        rgba(212,175,82,.10) 54deg, transparent 60deg);
+  }
+
+  /* ---- hero + capture ---- */
+  .hero{position:relative;padding:68px 0 72px;
+    background:radial-gradient(105% 95% at 32% 0%,#242329 0%,var(--ink) 63%);
+    border-bottom:1px solid var(--line);overflow:hidden}
+  .hero .wrap{position:relative;z-index:1}
+  .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:58px;align-items:center}
+  .eyebrow{letter-spacing:.32em;text-transform:uppercase;font-size:11px;
+    color:var(--gold-bright);font-weight:500;margin-bottom:22px}
+  h1{font-size:clamp(44px,6vw,70px);font-weight:900;line-height:1.03;letter-spacing:-.018em}
+  h1 em{font-style:italic;color:var(--gold-bright)}
+  .sub{max-width:640px;margin:22px 0 0;font-size:clamp(17px,2vw,20px);
+    color:var(--cream-dim);font-weight:300}
+  .sub b{color:var(--cream);font-weight:500}
+  .capture{margin-top:30px;padding:25px;border:1px solid var(--line);border-radius:7px;
+    background:rgba(10,10,13,.78);box-shadow:0 22px 55px rgba(0,0,0,.34)}
+  .capture-label{font-family:'Playfair Display',Georgia,serif;font-size:21px;font-weight:700}
+  .capture-note{font-size:14px;color:var(--cream-dim);margin-top:4px}
+  .capture-form{margin-top:17px}
+  .form-row{display:flex;gap:10px}
+  input[type=email]{min-width:0;flex:1;background:#060608;border:1px solid var(--line);
+    color:var(--cream);font-family:'Jost';font-size:16px;padding:15px 16px;border-radius:3px;outline:none}
+  input[type=email]:focus{border-color:var(--gold-bright);box-shadow:0 0 0 3px rgba(236,206,130,.1)}
+  .btn{display:inline-block;background:linear-gradient(180deg,var(--gold-bright),var(--gold));
+    color:#241a05;font-family:'Jost';font-weight:600;letter-spacing:.07em;text-transform:uppercase;
+    font-size:13px;padding:16px 28px;border:none;border-radius:3px;cursor:pointer;text-align:center;
+    text-decoration:none;transition:transform .15s ease,box-shadow .15s ease,opacity .15s ease;
+    box-shadow:0 8px 30px rgba(212,175,82,.24)}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 38px rgba(212,175,82,.38)}
+  .btn:disabled{opacity:.6;cursor:wait;transform:none}
+  .fineprint{font-size:11.5px;color:rgba(207,198,178,.58);margin-top:11px;line-height:1.5}
+  .fineprint a{text-decoration:underline}
+  .form-status{min-height:22px;margin-top:8px;font-size:13px;color:#ef9aa4}
+  .thanks{margin-top:2px}
+  .thanks h2{text-align:left;font-size:28px;margin-bottom:7px;color:var(--gold-bright)}
+  .thanks p{color:var(--cream-dim);font-size:14px}
+  .thanks .btn{margin-top:17px}
+  .delivery-pending{margin-top:12px;color:#ef9aa4!important}
+  .prefs{border-top:1px solid var(--line);margin-top:22px;padding-top:18px}
+  .prefs-q{font-family:'Playfair Display',Georgia,serif;font-size:17px;color:var(--cream)}
+  .prefs-note{font-size:13px;color:var(--cream-dim);margin-top:2px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .chip{background:transparent;border:1px solid var(--line);color:var(--cream);font-family:'Jost';
+    font-size:13.5px;padding:9px 14px;border-radius:999px;cursor:pointer;transition:border-color .15s ease,background .15s ease}
+  .chip:hover{border-color:var(--gold-bright)}
+  .chip[aria-pressed=true]{background:rgba(212,175,82,.16);border-color:var(--gold-bright);color:var(--gold-bright)}
+  .prefs-done{font-size:13px;color:var(--gold-bright);margin-top:10px;min-height:20px}
+
+  /* ---- hero covers ---- */
+  .gift-row{display:flex;gap:14px;align-items:center;margin-top:14px;padding:12px;border:1px solid var(--line);
+    border-radius:5px;background:rgba(212,175,82,.05)}
+  .gift-row img{width:54px;border:1px solid rgba(236,206,130,.3);border-radius:2px;box-shadow:0 8px 20px rgba(0,0,0,.45)}
+  .gift-row .gift-k{letter-spacing:.2em;text-transform:uppercase;font-size:10px;color:var(--gold);font-weight:500}
+  .gift-row .gift-t{font-family:'Playfair Display',Georgia,serif;font-size:16px;color:var(--cream);line-height:1.25}
+  .gift-row .gift-d{font-size:12.5px;color:var(--cream-dim)}
+  .shelf-visual{position:relative;min-height:540px;display:flex;align-items:center;justify-content:center}
+  .shelf-visual::before{content:"";position:absolute;width:390px;height:390px;border:1px solid var(--line);
+    transform:rotate(45deg);background:rgba(212,175,82,.025)}
+  .cover-img{position:absolute;width:238px;border:1px solid rgba(236,206,130,.32);border-radius:3px;
+    box-shadow:0 30px 70px rgba(0,0,0,.62);background:#111}
+  .cover-it{left:20px;top:40px;transform:rotate(-7deg);z-index:1;width:210px;opacity:.92}
+  .cover-ms{right:20px;top:40px;transform:rotate(7deg);z-index:1;width:210px;opacity:.92}
+  .hero-kit{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);z-index:2;width:210px;text-align:center}
+  .hero-kit img{width:210px;border:1px solid rgba(236,206,130,.4);border-radius:3px;box-shadow:0 30px 70px rgba(0,0,0,.7)}
+  .hero-kit .tag{display:inline-block;margin-top:12px;background:var(--oxblood);border:1px solid var(--gold-bright);
+    color:var(--gold-bright);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+
+  /* ---- shared sections ---- */
+  section{position:relative;padding:76px 0}
+  .rule{width:64px;height:1px;background:var(--gold);margin:0 auto 22px}
+  .kicker{text-align:center;letter-spacing:.3em;text-transform:uppercase;font-size:11px;
+    color:var(--gold);margin-bottom:10px;font-weight:500}
+  h2{text-align:center;font-size:clamp(30px,4.5vw,44px);font-weight:700;line-height:1.12;margin-bottom:14px}
+  .lede{text-align:center;max-width:720px;margin:0 auto;color:var(--cream-dim);font-size:17px}
+  .trust{border-bottom:1px solid var(--line);background:#111116}
+  .trust .wrap{display:flex;justify-content:center;gap:25px 52px;flex-wrap:wrap;padding-top:18px;padding-bottom:18px}
+  .trust-item{font-size:13px;color:var(--cream-dim)}
+  .trust-item::before{content:"◆";color:var(--gold);font-size:9px;margin-right:9px}
+
+  /* ---- series shelf ---- */
+  .series{background:var(--ink2);border-bottom:1px solid var(--line)}
+  .now-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:42px}
+  .title-card{display:grid;grid-template-columns:132px 1fr;gap:22px;align-items:center;
+    border:1px solid var(--line);border-radius:5px;padding:22px;background:var(--ink)}
+  .title-card img{width:132px;border:1px solid rgba(236,206,130,.25);border-radius:2px;box-shadow:0 14px 34px rgba(0,0,0,.5)}
+  .status{letter-spacing:.22em;text-transform:uppercase;font-size:10.5px;color:var(--gold);font-weight:500}
+  .title-card h3{font-size:24px;margin:6px 0 2px;font-weight:700}
+  .title-card .by{font-size:14px;color:var(--gold-bright)}
+  .title-card p{font-size:14.5px;color:var(--cream-dim);margin-top:10px}
+  .coming{margin-top:30px;border-top:1px solid var(--line);padding-top:26px}
+  .coming-head{text-align:center;letter-spacing:.28em;text-transform:uppercase;font-size:11px;color:var(--gold);margin-bottom:16px}
+  .coming-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .coming-item{border:1px solid var(--line);border-radius:5px;padding:16px;text-align:center;background:var(--ink)}
+  .coming-item h4{font-family:'Playfair Display',Georgia,serif;font-size:17px;font-weight:500;color:var(--cream)}
+  .coming-item .by{font-size:13px;color:var(--cream-dim);margin-top:2px}
+  .coming-item .when{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-top:8px}
+
+  /* ---- edition ---- */
+  .edition-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+  .feature{border:1px solid var(--line);border-radius:5px;padding:22px 20px;background:var(--ink2);text-align:center}
+  .feature::before{content:"◆";display:block;color:var(--gold);font-size:11px;margin-bottom:8px}
+  .feature h3{font-size:18px;font-weight:500}
+
+  /* ---- welcome gift ---- */
+  .gift{background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .gift-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:46px;align-items:center;margin-top:40px}
+  .gift-cover{width:100%;max-width:220px;margin:0 auto;border:1px solid rgba(236,206,130,.3);border-radius:3px;
+    box-shadow:0 28px 64px rgba(0,0,0,.55)}
+  .kit-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .kit-item{border:1px solid var(--line);border-radius:5px;padding:18px 18px;background:var(--ink)}
+  .kit-item .num{font-family:'Playfair Display';font-size:24px;color:var(--gold);line-height:1}
+  .kit-item h3{font-size:16.5px;margin:8px 0 4px;font-weight:500;color:var(--cream)}
+  .kit-item p{font-size:13.5px;color:var(--cream-dim)}
+
+  .final-cta{text-align:center;background:radial-gradient(100% 110% at 50% 0%,#202027,var(--ink))}
+  .final-cta .btn{margin-top:25px;padding-left:38px;padding-right:38px}
+
+  footer{text-align:center;padding:50px 0;color:rgba(207,198,178,.52);font-size:13px;border-top:1px solid var(--line)}
+  footer .brand{font-family:'Playfair Display';font-size:18px;color:var(--cream);letter-spacing:.04em;margin-bottom:8px}
+  footer a{margin:0 7px;text-decoration:underline}
+
+  @media(max-width:860px){
+    .hero{padding-top:48px}
+    .hero-grid,.gift-grid{grid-template-columns:1fr}
+    .hero-copy{text-align:center}
+    .sub{margin-left:auto;margin-right:auto}
+    .capture{text-align:left;max-width:620px;margin-left:auto;margin-right:auto}
+    .shelf-visual{min-height:510px;max-width:520px;width:100%;margin:0 auto}
+    .cover-it{left:40px}.cover-ms{right:40px}
+    .now-grid{grid-template-columns:1fr}
+    .coming-grid{grid-template-columns:repeat(2,1fr)}
+    .edition-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:560px){
+    .wrap{padding-left:16px;padding-right:16px}
+    .hero{padding-top:22px;padding-bottom:44px}
+    .eyebrow{margin-bottom:12px;font-size:10px;letter-spacing:.24em}
+    h1{font-size:38px}
+    .sub{margin-top:12px;font-size:16px}
+    .hide-sm{display:none}
+    .capture{margin-top:16px;padding:16px}
+    .capture-label{font-size:19px}
+    .gift-row{margin-top:10px;padding:10px}
+    .form-row{display:block}
+    .form-row input[type=email]{width:100%}
+    .form-row .btn{width:100%;margin-top:10px}
+    .shelf-visual{min-height:440px}
+    .cover-img{width:150px}
+    .cover-it{left:6px;top:24px}.cover-ms{right:6px;top:24px}
+    .hero-kit,.hero-kit img{width:170px}
+    .title-card{grid-template-columns:96px 1fr;gap:16px;padding:18px}
+    .title-card img{width:96px}
+    .kit-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<div class="preview-banner" id="preview-banner" hidden>DRAFT FOR REVIEW. This page is not live yet. The signup form is turned off and saves nothing.</div>
+
+<header class="hero">
+  <div class="deco-rays"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Histria Classics &middot; The Forgotten Classics Club</div>
+        <h1>Some stories deserve <em>a second life.</em></h1>
+        <p class="sub">Join free to hear first when Histria Classics brings back a book that shaped its era.<span class="hide-sm">
+          Your welcome gift is <b>The Original It Girl Kit</b>, a free illustrated book you can open right away.</span></p>
+
+        <div class="capture" id="get">
+          <div id="signup-panel">
+            <div class="capture-label">Join the Forgotten Classics Club</div>
+            <div class="capture-note">Free to join. Up to one email a week.</div>
+            <div class="gift-row">
+              <img src="./assets/kit-cover.jpg" alt="The Original It Girl Kit cover">
+              <div>
+                <div class="gift-k">Your free welcome gift</div>
+                <div class="gift-t">The Original It Girl Kit</div>
+                <div class="gift-d">An 11-page illustrated digital book. Open it the moment you join.</div>
+              </div>
+            </div>
+            <form id="leadform" class="capture-form" data-ml-action="/api/subscribe" method="post" novalidate>
+              <input type="hidden" name="source" value="lp-forgotten-classics-organic">
+              <input type="hidden" name="page" value="it-girl-kit">
+              <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;height:0;width:0;opacity:0">
+              <div class="form-row">
+                <input id="email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" aria-label="Email address">
+                <button id="submit-button" type="submit" class="btn">Join Free</button>
+              </div>
+              <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+              <p class="fineprint">Free forever. Up to one Forgotten Classics email a week.
+                Unsubscribe anytime. <a href="https://histriabooks.com/privacy-policy/" target="_blank" rel="noopener">Privacy</a>.</p>
+            </form>
+          </div>
+
+          <div class="thanks" id="thanks" hidden>
+            <h2>Welcome to the club.</h2>
+            <p>Your welcome gift, The Original It Girl Kit, is ready to open now.</p>
+            <a class="btn" id="bookfunnel-button" href="#" target="_blank" rel="noopener" hidden>Open Your Free Book</a>
+            <p class="delivery-pending" id="delivery-pending" hidden>The delivery link has not been configured.</p>
+            <p id="preview-note" hidden style="margin-top:12px;color:#ecce82;font-size:14px">Review copy: nothing was saved and no email will be sent. On the live page, the reader opens the free book from here.</p>
+
+            <div class="prefs" id="prefs">
+              <div class="prefs-q">Which lost worlds do you want back?</div>
+              <div class="prefs-note">Optional. Pick one so we send you more of what you love.</div>
+              <div class="chips" role="group" aria-label="Which lost worlds do you want back?">
+                <button type="button" class="chip" data-v="jazz-age" aria-pressed="false">Jazz Age &amp; Old Hollywood</button>
+                <button type="button" class="chip" data-v="american-novels" aria-pressed="false">Great American Novels</button>
+                <button type="button" class="chip" data-v="gothic" aria-pressed="false">Gothic &amp; the Supernatural</button>
+                <button type="button" class="chip" data-v="women-writers" aria-pressed="false">Forgotten Women Writers</button>
+              </div>
+              <div class="prefs-done" id="prefs-done" role="status" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="shelf-visual" aria-label="IT by Elinor Glyn and Main Street by Sinclair Lewis, Histria Forgotten Classics editions, with the free It Girl Kit">
+        <img class="cover-img cover-it" src="./assets/cover-it.jpg" alt="IT by Elinor Glyn, Forgotten Classics edition">
+        <img class="cover-img cover-ms" src="./assets/cover-main-street.jpg" alt="Main Street by Sinclair Lewis, Forgotten Classics edition">
+        <div class="hero-kit">
+          <img src="./assets/kit-cover.jpg" alt="The Original It Girl Kit, the free welcome gift">
+          <div class="tag">Your free welcome gift</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-item">Free to join</div>
+    <div class="trust-item">Up to one email a week</div>
+    <div class="trust-item">Welcome gift opens instantly</div>
+    <div class="trust-item">From Histria Books</div>
+  </div>
+</div>
+
+<section class="series">
+  <div class="wrap">
+    <div class="rule"></div>
+    <div class="kicker">Why These Books</div>
+    <h2>The books that shaped their era,<br>in editions worth keeping.</h2>
+    <p class="lede">Each Forgotten Classic shaped how people thought, talked, or lived in its era.
+      Histria Classics is bringing them back as deluxe hardcovers. Club members hear first when the next one returns.</p>
+
+    <div class="now-grid">
+      <div class="title-card">
+        <img src="./assets/cover-it.jpg" alt="IT by Elinor Glyn" loading="lazy">
+        <div>
+          <div class="status">Available now</div>
+          <h3>IT</h3>
+          <div class="by">Elinor Glyn</div>
+          <p>The 1927 novel that made &ldquo;It&rdquo; the word for irresistible charm, and the film that made Clara Bow its face.</p>
+        </div>
+      </div>
+      <div class="title-card">
+        <img src="./assets/cover-main-street.jpg" alt="Main Street by Sinclair Lewis" loading="lazy">
+        <div>
+          <div class="status">Next in the series</div>
+          <h3>Main Street</h3>
+          <div class="by">Sinclair Lewis</div>
+          <p>The 1920 novel that took on small-town conformity, from the first American to win the Nobel Prize in Literature.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="coming">
+      <div class="coming-head">Coming to the series</div>
+      <div class="coming-grid">
+        <div class="coming-item"><h4>Flaming Youth</h4><div class="by">Warner Fabian</div><div class="when">Spring 2027</div></div>
+        <div class="coming-item"><h4>Beggars of Life</h4><div class="by">Jim Tully</div><div class="when">Summer 2027</div></div>
+        <div class="coming-item"><h4>Waters of Hercules</h4><div class="by">Emily &amp; Dorothea Gerard</div><div class="when">Fall 2027</div></div>
+        <div class="coming-item"><h4>Claire Ambler</h4><div class="by">Booth Tarkington</div><div class="when">Spring 2028</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="rule"></div>
+    <div class="kicker">Made to Be Kept</div>
+    <h2>Every edition is made for the shelf.</h2>
+    <p class="lede">Each Forgotten Classics hardcover is made to be held, displayed, and handed down.</p>
+    <div class="edition-grid">
+      <div class="feature"><h3>Faux cloth binding</h3></div>
+      <div class="feature"><h3>Foil-stamped cover</h3></div>
+      <div class="feature"><h3>Designed colored endpapers</h3></div>
+      <div class="feature"><h3>Color inserts</h3></div>
+      <div class="feature"><h3>Premium cream paper</h3></div>
+      <div class="feature"><h3>Ribbon bookmark</h3></div>
+    </div>
+  </div>
+</section>
+
+<section class="gift">
+  <div class="wrap">
+    <div class="rule"></div>
+    <div class="kicker">Your Welcome Gift</div>
+    <h2>The Original It Girl Kit, free.</h2>
+    <p class="lede">An 11-page illustrated book that puts Elinor Glyn&rsquo;s novel, Clara Bow&rsquo;s film, and the story behind
+      &ldquo;It&rdquo; in one place. It opens the moment you join.</p>
+    <div class="gift-grid">
+      <img class="gift-cover" src="./assets/kit-cover.jpg" alt="The Original It Girl Kit cover" loading="lazy">
+      <div class="kit-grid">
+        <div class="kit-item"><div class="num">01</div><h3>Illustrated Origin Timeline</h3><p>Follow Elinor Glyn, the novel, the film, and the cultural moment from the 1920s onward.</p></div>
+        <div class="kit-item"><div class="num">02</div><h3>What &ldquo;It&rdquo; Meant</h3><p>A clear guide to Glyn&rsquo;s original idea of irresistible personal magnetism.</p></div>
+        <div class="kit-item"><div class="num">03</div><h3><em>Clara Bow: My Story</em></h3><p>Read the opening of Bow&rsquo;s startlingly direct account in her own words.</p></div>
+        <div class="kit-item"><div class="num">04</div><h3><em>IT</em> by Elinor Glyn</h3><p>Meet John Gaunt in the first-chapter excerpt from the restored 1927 novel.</p></div>
+        <div class="kit-item"><div class="num">05</div><h3>Watch, Then Read</h3><p>A viewing guide that shows where the film and Glyn&rsquo;s original story diverge.</p></div>
+        <div class="kit-item"><div class="num">06</div><h3>Clara Bow Mini-Biography</h3><p>Go beyond the flapper icon to the woman behind one of Hollywood&rsquo;s enduring legends.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <div class="rule"></div>
+    <div class="kicker">Join the Club</div>
+    <h2>Be first when the next classic returns.</h2>
+    <p class="lede">Join free, open your welcome gift today, and get up to one Forgotten Classics email a week.</p>
+    <a href="#get" class="btn">Join Free</a>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">Histria Books &middot; Forgotten Classics</div>
+  <div>Restoring overlooked works as objects worth keeping.</div>
+  <div style="margin-top:8px"><a href="https://histriabooks.com/forgotten-classics/" target="_blank" rel="noopener">Forgotten Classics</a> <a href="https://histriabooks.com/privacy-policy/" target="_blank" rel="noopener">Privacy</a></div>
+</footer>
+
+<!-- One delivery link for both Forgotten Classics pages. -->
+<script src="../it-girl-kit/config.js"></script>
+<script>
+  (function(){
+    var form = document.getElementById('leadform');
+    var signupPanel = document.getElementById('signup-panel');
+    var thanks = document.getElementById('thanks');
+    var submitButton = document.getElementById('submit-button');
+    var status = document.getElementById('form-status');
+    var bookfunnelButton = document.getElementById('bookfunnel-button');
+    var deliveryPending = document.getElementById('delivery-pending');
+    var prefsDone = document.getElementById('prefs-done');
+    var BOOKFUNNEL_URL = String(window.IT_GIRL_BOOKFUNNEL_URL || '').trim();
+    var inFlight = false;
+    if (!LIVE_HOST) document.getElementById('preview-banner').hidden = false;
+    var joinedEmail = '';
+
+    function validBookFunnelUrl(value){
+      try {
+        var parsed = new URL(value);
+        return parsed.protocol === 'https:' && parsed.hostname === 'dl.bookfunnel.com' && parsed.pathname.length > 1;
+      } catch (_) { return false; }
+    }
+
+    // Preserve an exact paid-traffic source in MailerLite without trusting arbitrary text.
+    try {
+      var qs = new URLSearchParams(window.location.search);
+      var source = (qs.get('src') || '').replace(/[^\w-]/g, '').slice(0, 48);
+      if (!source && qs.get('utm_source')) {
+        source = (qs.get('utm_source') + '-' + (qs.get('utm_campaign') || 'paid'))
+          .replace(/[^\w-]/g, '').slice(0, 48);
+      }
+      if (source && form.source) form.source.value = source;
+    } catch (_) {}
+
+    function revealDelivery(){
+      signupPanel.hidden = true;
+      thanks.hidden = false;
+      if (validBookFunnelUrl(BOOKFUNNEL_URL)) {
+        bookfunnelButton.href = BOOKFUNNEL_URL;
+        bookfunnelButton.hidden = false;
+        deliveryPending.hidden = true;
+      } else {
+        bookfunnelButton.hidden = true;
+        deliveryPending.hidden = false;
+      }
+    }
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      if (inFlight || !form.reportValidity()) return;
+      inFlight = true;
+      status.textContent = '';
+      submitButton.disabled = true;
+      submitButton.textContent = 'Joining…';
+      var leadSource = (form.source && form.source.value) || 'lp-forgotten-classics-organic';
+      if (!LIVE_HOST) {  // review copy: no network request, no pixel event
+        joinedEmail = 'preview';
+        signupPanel.hidden = true; thanks.hidden = false;
+        document.getElementById('preview-note').hidden = false;
+        return;
+      }
+      joinedEmail = String(form.email.value || '').trim();
+
+      fetch(form.getAttribute('data-ml-action'), {method:'POST', body:new FormData(form)})
+        .then(function(r){
+          if(!r.ok) throw new Error('subscribe HTTP ' + r.status);
+          return r.json();
+        })
+        .then(function(result){
+          if (!result || result.ok !== true) throw new Error('subscribe response was not OK');
+          if (result.new_to_group === true && window.fbq) {
+            fbq('track', 'Lead', {content_name:'Forgotten Classics Club', source:leadSource});
+          }
+          revealDelivery();
+        })
+        .catch(function(err){
+          console.error('subscribe failed', err);
+          status.textContent = 'We could not save your signup. Please try again.';
+          inFlight = false;
+          submitButton.disabled = false;
+          submitButton.textContent = 'Join Free';
+        });
+    });
+
+    // Optional reading preference, asked only after the join so it adds no friction to the form.
+    // Saved to the Forgotten Classics-only field fc_interest (never the shared `interest` field).
+    Array.prototype.forEach.call(document.querySelectorAll('.chip'), function(chip){
+      chip.addEventListener('click', function(){
+        if (!joinedEmail) return;
+        if (!LIVE_HOST) {
+          Array.prototype.forEach.call(document.querySelectorAll('.chip'), function(c){
+            c.setAttribute('aria-pressed', c === chip ? 'true' : 'false');
+          });
+          prefsDone.textContent = 'Review copy: your choice was not saved.';
+          return;
+        }
+        var v = chip.getAttribute('data-v');
+        Array.prototype.forEach.call(document.querySelectorAll('.chip'), function(c){
+          c.setAttribute('aria-pressed', c === chip ? 'true' : 'false');
+        });
+        if (window.fbq) { fbq('trackCustom', 'PreferenceSet', {fc_interest:v}); }
+        var fd = new FormData();
+        fd.append('email', joinedEmail); fd.append('fc_interest', v); fd.append('page', 'it-girl-kit');
+        prefsDone.textContent = 'Saving…';
+        fetch('/api/subscribe', {method:'POST', body:fd})
+          .then(function(r){ return r.ok ? r.json() : null; })
+          .then(function(result){
+            prefsDone.textContent = (result && result.ok === true) ? 'Thank you. We saved your choice.' : 'We could not save that. Your gift is still yours.';
+          })
+          .catch(function(){ prefsDone.textContent = 'We could not save that. Your gift is still yours.'; });
+      });
+    });
+  })();
+</script>
+</body>
+</html>
