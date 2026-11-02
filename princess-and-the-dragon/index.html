@@ -62,7 +62,7 @@
   h1{font-size:clamp(38px,5.4vw,58px);line-height:1.08}
   .sub{margin-top:16px;font-size:clamp(17px,2vw,20px);color:var(--ink);max-width:560px}
   .capture{margin-top:26px;padding:24px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
-  .capture-label{font-family:'Bree Serif',Georgia,serif;font-size:23px;line-height:1.2}
+  .capture-label{display:block;font-family:'Bree Serif',Georgia,serif;font-size:23px;line-height:1.2}
   .capture-note{font-size:15px;color:var(--muted);margin-top:4px}
   .capture-form{margin-top:16px}
   .form-row{display:flex;gap:10px}
@@ -149,18 +149,19 @@
 
 <div class="brandbar"><div class="wrap">Histria Kids <span class="tagline">Books worth sharing</span></div></div>
 
+<main>
 <header class="hero">
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
         <div class="eyebrow">Book 1 of The Princess and the Dragon, free</div>
         <h1>Her best friend is a fire-breathing dragon.</h1>
-        <p class="sub">Get <b>The Princess and the Dragon: How the Princess Met the Dragon</b> free. Join the Histria Kids email list and we'll email the book to you.</p>
+        <p class="sub">Get <b>The Princess and the Dragon: How the Princess Met the Dragon</b> free. Join the Histria Kids email list and we'll email you a link to the book.</p>
 
         <div class="capture" id="get">
           <div id="signup-panel">
-            <div class="capture-label">Where should we send your free book?</div>
-            <div class="capture-note">Enter your email. The book comes to your inbox.</div>
+            <label class="capture-label" for="email">Where should we send your free book?</label>
+            <div class="capture-note">Enter your email. A link to the book comes to your inbox.</div>
             <div class="gift-row">
               <img src="./assets/cover-v1.jpg" width="640" height="688" alt="">
               <div>Your free illustrated ebook: <b>How the Princess Met the Dragon</b></div>
@@ -180,7 +181,7 @@
 
           <div class="thanks" id="thanks" hidden>
             <h2>Check your email.</h2>
-            <p>Look for an email from Histria Kids with your free copy of <b>The Princess and the Dragon: How the Princess Met the Dragon</b>.</p>
+            <p>Look for an email from Histria Kids with the link to your free copy of <b>The Princess and the Dragon: How the Princess Met the Dragon</b>.</p>
             <p>If you don't see it, check your spam or promotions folder. Still no email? Write to <a href="mailto:info@histriabooks.com">info@histriabooks.com</a>.</p>
             <p class="preview-note" id="preview-note" hidden>Review copy: nothing was saved and no email will be sent. On the live page, the reader gets the book by email.</p>
           </div>
@@ -228,7 +229,7 @@
 <section>
   <div class="wrap">
     <h2>If your reader wants more</h2>
-    <p class="lede">Olive and her dragon have a second adventure. We'll tell you when a new book is on the way.</p>
+    <p class="lede">The princess and her dragon have a second adventure. We'll tell you when a new book is on the way.</p>
     <div class="shelf">
       <div class="book">
         <img src="./assets/cover-v2.jpg" width="600" height="600" alt="How the Princess Saved the Kingdom, book cover" loading="lazy">
@@ -250,6 +251,8 @@
   </div>
 </section>
 
+</main>
+
 <footer>
   <div class="wrap">
     <div class="brand">Histria Kids</div>
@@ -265,6 +268,13 @@
     var submitButton = document.getElementById('submit-button');
     var status = document.getElementById('form-status');
     var inFlight = false;
+    function showThanks(){
+      signupPanel.hidden = true;
+      thanks.hidden = false;
+      var h = thanks.querySelector('h2');
+      h.setAttribute('tabindex','-1');
+      h.focus();
+    }
     if (!LIVE_HOST) document.getElementById('preview-banner').hidden = false;
 
     // Preserve an exact paid-traffic source in MailerLite without trusting arbitrary text.
@@ -287,7 +297,7 @@
       submitButton.textContent = 'Sending…';
       var leadSource = (form.source && form.source.value) || 'lp-princess-dragon-direct';
       if (!LIVE_HOST) {  // review copy: no network request, no pixel event
-        signupPanel.hidden = true; thanks.hidden = false;
+        showThanks();
         document.getElementById('preview-note').hidden = false;
         return;
       }
@@ -302,8 +312,7 @@
           if (result.new_to_group === true && window.fbq) {
             fbq('track', 'Lead', {content_name:'Histria Kids', source:leadSource});
           }
-          signupPanel.hidden = true;
-          thanks.hidden = false;
+          showThanks();
         })
         .catch(function(err){
           console.error('subscribe failed', err);
