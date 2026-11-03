@@ -5,11 +5,11 @@
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Free Book: How the Princess Met the Dragon | Histria Kids</title>
-<meta name="description" content="Get How the Princess Met the Dragon free. Join the Histria Kids email list and we will email the illustrated book to you.">
+<meta name="description" content="Get How the Princess Met the Dragon free. Join the Histria Kids email list and we will email you a link to the illustrated book.">
 <link rel="icon" href="data:,">
 
 <meta property="og:title" content="Free book: How the Princess Met the Dragon">
-<meta property="og:description" content="Her best friend is a fire-breathing dragon. Join Histria Kids and we will email you the illustrated book, free.">
+<meta property="og:description" content="Her best friend is a fire-breathing dragon. Join Histria Kids and we will email you a link to the illustrated book, free.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://histria-pages.pages.dev/princess-and-the-dragon/">
 <meta property="og:image" content="https://histria-pages.pages.dev/princess-and-the-dragon/assets/cover-v1.jpg">
@@ -154,7 +154,7 @@
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
-        <div class="eyebrow">Book 1 of The Princess and the Dragon, free</div>
+        <div class="eyebrow">Free ebook for ages 5 to 9: Book 1 of The Princess and the Dragon</div>
         <h1>Her best friend is a fire-breathing dragon.</h1>
         <p class="sub">Get <b>The Princess and the Dragon: How the Princess Met the Dragon</b> free. Join the Histria Kids email list and we'll email you a link to the book.</p>
 
@@ -197,7 +197,7 @@
   <div class="wrap">
     <div>For ages 5 to 9</div>
     <div>Free ebook</div>
-    <div>Delivered by email</div>
+    <div>Book link sent by email</div>
     <div>From Histria Kids</div>
   </div>
 </div>
@@ -230,7 +230,7 @@
 <section>
   <div class="wrap">
     <h2>If your reader wants more</h2>
-    <p class="lede">The princess and her dragon have a second adventure. We'll tell you when a new book is on the way.</p>
+    <p class="lede">The princess and her dragon have a second adventure, out now. We'll also tell you when another book is on the way.</p>
     <div class="shelf">
       <div class="book">
         <img src="./assets/cover-v2.jpg" width="600" height="600" alt="How the Princess Saved the Kingdom, book cover" loading="lazy">
@@ -248,7 +248,7 @@
   <div class="wrap">
     <h2>Tonight's story is on us.</h2>
     <p class="lede">Tell us where to send The Princess and the Dragon: How the Princess Met the Dragon.</p>
-    <a href="#get" class="btn">Send Me the Free Book</a>
+    <a href="#get" class="btn" id="final-cta">Send Me the Free Book</a>
   </div>
 </section>
 
@@ -277,6 +277,14 @@
       h.focus();
     }
     if (!LIVE_HOST) document.getElementById('preview-banner').hidden = false;
+
+    // The final button scrolls to the form; put the cursor in the email field once it gets there.
+    document.getElementById('final-cta').addEventListener('click', function(){
+      setTimeout(function(){
+        var email = document.getElementById('email');
+        if (!signupPanel.hidden) email.focus({preventScroll:true});
+      }, 450);
+    });
 
     // Preserve an exact paid-traffic source in MailerLite without trusting arbitrary text.
     try {
