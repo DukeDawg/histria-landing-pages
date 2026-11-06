@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Histria Kids welcome email (draft for review)</title>
+<script>
+  // Review page only: no pixel, no signup, no network calls.
+  var LIVE_HOST = /(^|\.)histria-pages\.pages\.dev$/.test(location.hostname);
+</script>
+<style>
+  body{margin:0;background:#efe9dc;font-family:Arial,Helvetica,sans-serif;color:#16384a}
+  .preview-banner{background:#7a1f2b;color:#fff;text-align:center;font-size:14px;padding:8px 12px;font-weight:700;line-height:1.4}
+  .wrap{max-width:680px;margin:0 auto;padding:20px 16px 40px}
+  h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:26px;margin:6px 0 6px}
+  .intro{font-size:15px;line-height:1.55;margin:0 0 16px}
+  .env{background:#fff;border:1px solid #d9cfb9;border-radius:8px;padding:12px 14px;font-size:14px;line-height:1.7;margin-bottom:16px}
+  .env b{display:inline-block;min-width:92px;color:#51656f;font-weight:600}
+  .toggle{display:flex;gap:8px;margin:0 0 12px}
+  .toggle button{font:600 14px Arial,Helvetica,sans-serif;padding:8px 14px;border-radius:6px;border:1px solid #1f5236;background:#fff;color:#1f5236;cursor:pointer}
+  .toggle button[aria-pressed="true"]{background:#1f5236;color:#fff}
+  .frame{background:#fff;border:1px solid #d9cfb9;border-radius:8px;overflow:hidden;margin:0 auto;width:100%;max-width:100%}
+  iframe{display:block;width:100%;border:0}
+  .note{font-size:13px;color:#51656f;line-height:1.5;margin-top:14px}
+</style>
+</head>
+<body>
+<div class="preview-banner" id="preview-banner" hidden>DRAFT FOR REVIEW. This email is not live yet.</div>
+<div class="wrap">
+  <h1>Histria Kids welcome email</h1>
+  <p class="intro">This is the email a parent gets right after signing up on the Princess and the Dragon page. It delivers the free book.</p>
+  <div class="env">
+    <div><b>From</b>Histria Kids &lt;info@histriabooks.com&gt;</div>
+    <div><b>Subject</b>Your free Princess and the Dragon book is here</div>
+    <div><b>Preview text</b>How the Princess Met the Dragon, free for your family.</div>
+    <div><b>Sends</b>Right after someone joins the Histria Kids list</div>
+  </div>
+  <div class="toggle" role="group" aria-label="Screen size">
+    <button type="button" id="btn-desktop" aria-pressed="true">Computer</button>
+    <button type="button" id="btn-phone" aria-pressed="false">Phone</button>
+  </div>
+  <div class="frame" id="frame"><iframe id="email" src="email.html" title="Histria Kids welcome email" scrolling="no"></iframe></div>
+  <p class="note">The buttons work: "Get your free book" opens the real BookFunnel download page, and the other two open Amazon. The Unsubscribe and View in browser links work only in the real email.</p>
+</div>
+<script>
+  if (!LIVE_HOST) document.getElementById('preview-banner').hidden = false;
+  var f = document.getElementById('email'), box = document.getElementById('frame');
+  function fit(){
+    try {
+      f.style.height = '0px';
+      var d = f.contentWindow.document;
+      f.style.height = Math.max(d.body.scrollHeight, d.documentElement.scrollHeight) + 'px';
+    } catch(e) { f.style.height = '2400px'; }
+  }
+  f.addEventListener('load', fit);
+  function size(phone){
+    box.style.width = phone ? '375px' : '100%';
+    document.getElementById('btn-phone').setAttribute('aria-pressed', phone);
+    document.getElementById('btn-desktop').setAttribute('aria-pressed', !phone);
+    fit(); setTimeout(fit, 100);
+  }
+  document.getElementById('btn-phone').onclick = function(){ size(true); };
+  document.getElementById('btn-desktop').onclick = function(){ size(false); };
+  window.addEventListener('resize', fit);
+</script>
+</body>
+</html>
